@@ -46,6 +46,7 @@ public class TelaCentral extends javax.swing.JFrame {
         menuServicos = new javax.swing.JMenuItem();
         menuAjuda = new javax.swing.JMenu();
         menuSobre = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         menuOpcoes = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
 
@@ -126,6 +127,14 @@ public class TelaCentral extends javax.swing.JFrame {
             }
         });
         menuAjuda.add(menuSobre);
+
+        jMenuItem1.setText("Teste");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        menuAjuda.add(jMenuItem1);
 
         jMenuBar1.add(menuAjuda);
 
@@ -214,8 +223,15 @@ public class TelaCentral extends javax.swing.JFrame {
 
     private void menuClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuClienteActionPerformed
         // TODO add your handling code here:
+        TelaClientes cliente = new TelaClientes();
+        cliente.setVisible(true);
+        Desktop.add(cliente);
        
     }//GEN-LAST:event_menuClienteActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -256,6 +272,7 @@ public class TelaCentral extends javax.swing.JFrame {
     private javax.swing.JDesktopPane Desktop;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JLabel lblTdata;
     public static javax.swing.JLabel lblTusuario;
